@@ -106,6 +106,115 @@
 
   </div>
 
+<section class="git-panel" id="git">
+
+  <div class="section-heading">
+    <span class="git-symbol">⑂</span>
+    <h2>Результати роботи з Git</h2>
+  </div>
+
+  <p class="section-description">
+    Історія комітів, гілки та результати
+    виконання Git-команд.
+  </p>
+
+  <div class="git-tabs">
+
+    <input type="radio"
+           name="git-tab"
+           id="tab-status" checked>
+
+    <input type="radio"
+           name="git-tab"
+           id="tab-branch">
+
+    <input type="radio"
+           name="git-tab"
+           id="tab-log">
+
+    <input type="radio"
+           name="git-tab"
+           id="tab-merge">
+
+    <div class="tab-labels">
+      <label for="tab-status">Git Status</label>
+      <label for="tab-branch">Git Branch</label>
+      <label for="tab-log">Git Log</label>
+      <label for="tab-merge">Merge History</label>
+    </div>
+
+    <div class="terminal">
+
+      <div class="terminal-header">
+        <div class="window-dots">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+        </div>
+
+        <span class="terminal-title">git-terminal</span>
+      </div>
+
+      <div class="terminal-body">
+
+        <pre class="tab-content status"><code>$ git status
+
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean</code></pre>
+
+        <pre class="tab-content branch"><code>$ git branch -a
+
+  feature/about
+* main
+  remotes/origin/HEAD -&gt; origin/main
+  remotes/origin/feature/about
+  remotes/origin/main</code></pre>
+
+        <pre class="tab-content log"><code>$ git log --oneline
+
+9c36ca4 (HEAD -&gt; main, origin/main, origin/HEAD) Merge branch 'main' of https://github.com/malenkyiprince/my-first-website
+206b8d6 (origin/feature/about, feature/about) Resolve heading conflict
+a0ccb37 Change page heading
+9d81bfc Update main heading
+9a2a393 Merge pull request #1 from malenkyiprince/feature/about
+f6d3727 Update hobbies list
+5312ef6 Add hobbies section
+f9ab4fe Update GitHub link in index.html
+e25854b Add initial website</code></pre>
+
+        <pre class="tab-content merge"><code>$ git log --merges
+
+commit 9c36ca48ca3ecf5a16eb6035644cafd7b31da513 (HEAD -&gt; main, origin/main, origin/HEAD)
+Merge: 206b8d6 9a2a393
+Author: malenkyiprince &lt;goodomejn@gmail.com&gt;
+Date:   Tue Oct 27 10:39:57 2026 +0200
+
+    Merge branch 'main' of https://github.com/malenkyiprince/my-first-website
+
+commit 206b8d6188e61f539e5207f29629f0338b64b2fa (origin/feature/about, feature/about)
+Merge: a0ccb37 9d81bfc
+Author: malenkyiprince &lt;goodomejn@gmail.com&gt;
+Date:   Tue Oct 27 10:38:41 2026 +0200
+
+    Resolve heading conflict
+
+commit 9a2a3932092cfb0559aa51a9baf3e6c9a957414c
+Merge: f9ab4fe f6d3727
+Author: маленький принц &lt;malenkyiiprince@gmail.com&gt;
+Date:   Tue Oct 27 10:33:53 2026 +0200
+
+    Merge pull request #1 from malenkyiprince/feature/about
+
+    Feature/about</code></pre>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
   <footer class="footer">
     <p>Made with Git & GitHub Pages</p>
   </footer>
